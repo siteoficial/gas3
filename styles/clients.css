@@ -1,0 +1,138 @@
+/* Clients Section Styles */
+.clients {
+    padding: 60px 0;
+    background-color: #010044;
+    overflow: hidden;
+    position: relative;
+}
+
+.clients .section-title {
+    color: #ffffff;
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.clients .highlight {
+    color: #FFF111;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+}
+
+.clients .section-subtitle {
+    color: #ffffff;
+    text-align: center;
+    font-size: 1.1rem;
+    margin-bottom: 40px;
+}
+
+.clients-slider {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    padding: 20px 0;
+}
+
+.clients-slider::before,
+.clients-slider::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 200px;
+    height: 100%;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.clients-slider::before {
+    left: 0;
+    background: linear-gradient(to right, #010044, transparent);
+}
+
+.clients-slider::after {
+    right: 0;
+    background: linear-gradient(to left, #010044, transparent);
+}
+
+.clients-track {
+    display: flex;
+    animation: scroll 25s linear infinite;
+    width: calc(220px * 12); /* Width of each logo (200px + 20px margin) * number of logos (6) * 2 for duplicate set */
+}
+
+.client-logo {
+    flex: 0 0 200px;
+    height: 100px;
+    padding: 15px;
+    margin: 0 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+}
+
+.client-logo img {
+    max-width: 160px;
+    height: 70px;
+    object-fit: contain;
+    filter: brightness(0) invert(1);
+    opacity: 0.8;
+    transition: all 0.3s ease;
+}
+
+.client-logo:hover img {
+    filter: brightness(1) invert(0);
+    opacity: 1;
+    transform: scale(1.05);
+}
+
+/* Animation for infinite scroll */
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(-220px * 6)); /* Width of each logo * number of logos in one set */
+    }
+}
+
+/* Pause animation on hover */
+.clients-slider:hover .clients-track {
+    animation-play-state: paused;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .clients {
+        padding: 40px 0;
+    }
+    
+    .clients .section-title {
+        font-size: 2rem;
+    }
+    
+    .clients-slider::before,
+    .clients-slider::after {
+        width: 100px;
+    }
+    
+    .client-logo {
+        flex: 0 0 180px;
+        height: 90px;
+        padding: 10px;
+    }
+    
+    .client-logo img {
+        max-width: 140px;
+        height: 60px;
+    }
+    
+    @keyframes scroll {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(calc(-180px * 6)); /* Adjusted for mobile */
+        }
+    }
+}

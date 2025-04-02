@@ -1,0 +1,88 @@
+.floating-buttons {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    display: flex;
+    flex-direction: column; /* Changed to column to put top button above WhatsApp */
+    gap: 10px;
+    z-index: 1000;
+}
+
+.floating-btn {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.floating-btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+}
+
+.whatsapp-btn {
+    background-color: #25D366; /* Standard WhatsApp green color */
+    color: white;
+    font-size: 24px;
+    order: 2; /* Ensures WhatsApp is at the bottom */
+}
+
+.top-btn {
+    background-color: var(--primary-blue);
+    color: var(--primary-yellow);
+    font-size: 20px;
+    border: 2px solid rgba(255, 241, 17, 0.6);
+    opacity: 0; /* Start with opacity 0 */
+    transform: translateY(20px); /* Start slightly below final position */
+    animation: fadeInUp 0.3s ease forwards; /* Animation to fade in and move up */
+    order: 1; /* Ensures top button is above WhatsApp */
+    box-shadow: 0 0 6px rgba(255, 241, 17, 0.3);
+}
+
+.top-btn:hover {
+    box-shadow: 0 0 10px rgba(255, 241, 17, 0.5);
+    transform: translateY(-3px);
+    border-color: var(--primary-yellow);
+}
+
+/* Animation for the buttons */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.whatsapp-btn {
+    animation: pulse 2s infinite;
+}
+
+/* Make buttons responsive on smaller screens */
+@media (max-width: 768px) {
+    .floating-btn {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .floating-buttons {
+        right: 15px;
+        bottom: 15px;
+    }
+}
