@@ -166,6 +166,7 @@
         min-height: auto;
         height: auto;
         padding: 80px 0 40px;
+        background-position: center;
     }
     
     .hero-logo {
@@ -219,10 +220,14 @@
 @media (max-width: 480px) {
     .hero {
         padding: 60px 0 30px;
+        min-height: 100vh;
+        justify-content: center;
     }
     
     .hero-content {
-        padding-top: 20px;
+        padding-top: 60px;
+        padding-bottom: 20px;
+        width: 100%;
     }
     
     .hero-logo {
@@ -230,28 +235,67 @@
     }
     
     .hero-title {
-        font-size: 1.8rem;
+        font-size: 1.6rem;
+        line-height: 1.3;
+    }
+    
+    .hero-subtitle {
+        font-size: 1rem;
+        line-height: 1.4;
+        margin-bottom: 1.2rem;
+    }
+    
+    .hero-cta .btn {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.9rem;
     }
     
     .hero-features {
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
+        flex-direction: column;
+        align-items: center;
         gap: 0.8rem;
+        margin-top: 1.2rem;
     }
     
     .hero-feature {
-        flex: 0 0 calc(50% - 0.8rem);
-        max-width: calc(50% - 0.8rem);
+        flex: 0 0 100%;
+        max-width: 100%;
         padding: 10px;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        text-align: left;
     }
     
     .hero-feature-icon {
-        font-size: 1.8rem;
-        margin-bottom: 0.5rem;
+        font-size: 1.5rem;
+        margin-bottom: 0;
+        margin-right: 10px;
     }
     
     .hero-feature-text {
         font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 360px) {
+    .hero-content {
+        padding-top: 50px;
+    }
+    
+    .hero-title {
+        font-size: 1.4rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 0.9rem;
+    }
+    
+    .hero-feature-icon {
+        font-size: 1.3rem;
+    }
+    
+    .hero-feature-text {
+        font-size: 0.8rem;
     }
 }

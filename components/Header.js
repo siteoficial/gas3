@@ -5,12 +5,17 @@ function Header() {
         const [activeSection, setActiveSection] = React.useState('home');
 
         // Verificar se estamos na página principal ou na página de pátios
-        const isMainPage = window.location.pathname === "/" || window.location.pathname.includes("index.html");
+        const isMainPage = window.location.pathname === "/" || window.location.pathname.includes("index.html") || window.location.pathname === "";
         
         React.useEffect(() => {
             // If we're on the patios page, set activeSection to 'patios'
-            if (!isMainPage) {
+            if (!isMainPage && window.location.pathname.includes("patios.html")) {
                 setActiveSection('patios');
+            } else if (isMainPage) {
+                // Default to 'home' when on the main page
+                if (!window.location.hash) {
+                    setActiveSection('home');
+                }
             }
             
             const handleScroll = () => {
