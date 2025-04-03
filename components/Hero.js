@@ -4,6 +4,13 @@ function Hero() {
             <section data-name="hero" id="home" className="hero">
                 <div data-name="container" className="container">
                     <div data-name="hero-content" className="hero-content">
+                        <div className="hero-logo-container">
+                            <img 
+                                src="images/logo-alto-da-serra.png" 
+                                alt="Logo Grupo Alto da Serra" 
+                                className="hero-logo" 
+                            />
+                        </div>
                         <h1 data-name="hero-title" className="hero-title">
                             Serviço de <span className="text-secondary">Guincho 24h</span> para todo tipo de veículo
                         </h1>
