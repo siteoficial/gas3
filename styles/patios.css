@@ -1,0 +1,244 @@
+#patios {
+    position: relative;
+}
+
+#map {
+    width: 100%;
+    height: 100%;
+    border-radius: 0.5rem;
+}
+
+/* Estilos para o container do mapa */
+.map-container {
+    height: 500px;
+}
+
+.patio-card {
+    transition: all 0.3s ease;
+}
+
+.patio-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para os cards de filtro por região */
+.regiao-filter-card {
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.regiao-filter-card:hover {
+    transform: translateY(-2px);
+}
+
+.regiao-filter-card.active {
+    box-shadow: 0 0 0 2px #FFF111;
+}
+
+.regiao-filter-card.active::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #FFF111;
+}
+
+/* Estilos para o Leaflet */
+.custom-map-marker {
+    transition: transform 0.3s ease;
+    z-index: 1000 !important;
+}
+
+.custom-map-marker:hover {
+    transform: scale(1.1);
+    z-index: 1001 !important;
+}
+
+.marker-container {
+    display: flex;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    padding: 4px 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    border: 1px solid #010044;
+    white-space: nowrap;
+    max-width: 150px;
+    overflow: hidden;
+}
+
+/* Estilos específicos para a Matriz Central */
+.marker-matriz {
+    background-color: rgba(255, 241, 17, 0.2);
+    border: 2px solid #010044;
+    box-shadow: 0 0 10px rgba(255, 241, 17, 0.5);
+    z-index: 1000 !important;
+    transform: scale(1.1);
+}
+
+.marker-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 26px;
+    width: 26px;
+    height: 26px;
+    background-color: #FFF111;
+    border-radius: 50%;
+    margin-right: 6px;
+    flex-shrink: 0;
+}
+
+.marker-icon-matriz {
+    background-color: #010044;
+    width: 30px;
+    height: 30px;
+}
+
+.marker-label {
+    font-weight: bold;
+    color: #010044;
+    font-size: 11px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.marker-label-matriz {
+    font-size: 13px;
+    font-weight: 800;
+}
+
+/* Filtro de regiões */
+.regiao-container {
+    display: flex;
+    overflow-x: auto;
+    padding-bottom: 8px;
+    scrollbar-width: thin;
+    scrollbar-color: #010044 #f0f0f0;
+}
+
+.regiao-container::-webkit-scrollbar {
+    height: 6px;
+}
+
+.regiao-container::-webkit-scrollbar-track {
+    background: #f0f0f0;
+    border-radius: 10px;
+}
+
+.regiao-container::-webkit-scrollbar-thumb {
+    background-color: #010044;
+    border-radius: 10px;
+}
+
+.regiao-button {
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.regiao-button.active {
+    position: relative;
+}
+
+.regiao-button.active::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 6px;
+    height: 6px;
+    background-color: #FFF111;
+    border-radius: 50%;
+}
+
+/* Campo de pesquisa */
+.search-input {
+    transition: all 0.3s ease;
+}
+
+.search-input:focus {
+    box-shadow: 0 0 0 3px rgba(1, 0, 68, 0.2);
+}
+
+/* Lista de pátios */
+.patio-list-item {
+    transition: all 0.3s ease;
+}
+
+.patio-list-item:hover {
+    transform: translateY(-2px);
+}
+
+.patio-matriz-badge {
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(255, 241, 17, 0.7);
+    }
+    70% {
+        box-shadow: 0 0 0 6px rgba(255, 241, 17, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(255, 241, 17, 0);
+    }
+}
+
+.leaflet-popup-content-wrapper {
+    border-radius: 8px;
+    box-shadow: 0 3px 14px rgba(0, 0, 0, 0.2);
+}
+
+.leaflet-popup-content {
+    margin: 12px;
+    font-family: inherit;
+}
+
+.leaflet-container a.leaflet-popup-close-button {
+    color: #010044;
+}
+
+.leaflet-container a.leaflet-popup-close-button:hover {
+    color: #E93432;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .map-container {
+        height: 350px;
+    }
+    
+    #map {
+        height: 100%;
+    }
+    
+    .marker-container {
+        padding: 2px 5px;
+        max-width: 120px;
+    }
+    
+    .marker-icon {
+        width: 22px;
+        height: 22px;
+        margin-right: 4px;
+    }
+    
+    .marker-icon-matriz {
+        width: 26px;
+        height: 26px;
+    }
+    
+    .marker-label {
+        font-size: 10px;
+    }
+    
+    .marker-label-matriz {
+        font-size: 11px;
+    }
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pátios Parceiros - Grupo Alto da Serra</title>
+    <meta name="description" content="Conheça nossa rede de pátios parceiros estrategicamente localizados para melhor atender você.">
+    <meta name="keywords" content="pátios, guincho, reboque, assistência veicular, pátios parceiros">
+    <meta property="og:title" content="Pátios Parceiros - Grupo Alto da Serra">
+    <meta property="og:description" content="Conheça nossa rede de pátios parceiros estrategicamente localizados para melhor atender você.">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Pátios Parceiros - Grupo Alto da Serra">
+    <meta name="twitter:description" content="Conheça nossa rede de pátios parceiros estrategicamente localizados para melhor atender você.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://resource.trickle.so/vendor_lib/unpkg/react@18/umd/react.production.min.js"></script>
+    <script src="https://resource.trickle.so/vendor_lib/unpkg/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://resource.trickle.so/vendor_lib/unpkg/@babel/standalone/babel.min.js"></script>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/footer.css">
+    <link rel="stylesheet" href="styles/floating-buttons.css">
+    <link rel="stylesheet" href="styles/patios.css">
+</head>
+<body>
+    <div id="root"></div>
+    <script type="text/babel" src="components/Header.js"></script>
+    <script type="text/babel" src="components/Footer.js"></script>
+    <script type="text/babel" src="components/FloatingButtons.js"></script>
+    <script type="text/babel" src="components/Patios.js"></script>
+    <script type="text/babel">
+        function PatiosPage() {
+            try {
+                return (
+                    <div data-name="patios-page">
+                        <Header />
+                        <div className="pt-20">
+                            <Patios />
+                        </div>
+                        <Footer />
+                        <FloatingButtons />
+                    </div>
+                );
+            } catch (error) {
+                console.error('PatiosPage component error:', error);
+                return null;
+            }
+        }
+
+        // Render the React application
+        ReactDOM.render(<PatiosPage />, document.getElementById('root'));
+    </script>
+</body>
+</html>
