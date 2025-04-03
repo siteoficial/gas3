@@ -1,0 +1,15 @@
+.nav-link:focus,
+.mobile-menu-button:focus,
+.btn:focus,
+.floating-buttons button:focus {
+    outline: none;
+}
+
+/* Mantém a acessibilidade via teclado mas remove o efeito visual */
+.nav-link:focus-visible,
+.mobile-menu-button:focus-visible,
+.btn:focus-visible,
+.floating-buttons button:focus-visible {
+    outline: none;
+    box-shadow: none;
+}

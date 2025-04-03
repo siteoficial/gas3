@@ -44,16 +44,19 @@ function FloatingButtons() {
                     </button>
                 )}
                 
-                {/* WhatsApp Button */}
-                <a 
-                    href="https://wa.me/5511999998888" 
-                    className="floating-btn whatsapp-btn" 
-                    aria-label="Contato via WhatsApp"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    <i className="fab fa-whatsapp"></i>
-                </a>
+                {/* WhatsApp Button with Chat Bubble */}
+                <div className="whatsapp-container">
+                    <div className="chat-bubble">Posso te ajudar?</div>
+                    <a 
+                        href="https://wa.me/5511999998888" 
+                        className="floating-btn whatsapp-btn" 
+                        aria-label="Contato via WhatsApp"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        <i className="fab fa-whatsapp"></i>
+                    </a>
+                </div>
             </div>
         );
     } catch (error) {
