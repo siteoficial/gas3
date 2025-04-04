@@ -15,18 +15,12 @@ function Footer() {
                                 Atendimento 24 horas em toda a região.
                             </p>
                             <div data-name="footer-social" className="footer-social">
-                                <a data-name="footer-social-facebook" href="#" aria-label="Facebook">
-                                    <i className="fab fa-facebook-f"></i>
-                                </a>
-                                <a data-name="footer-social-instagram" href="#" aria-label="Instagram">
+                                <a data-name="footer-social-instagram" target="_blank" href="https://www.instagram.com/autosocorro_altodaserra" aria-label="Instagram">
                                     <i className="fab fa-instagram"></i>
                                 </a>
-                                <a data-name="footer-social-whatsapp" href="#" aria-label="WhatsApp">
+                                <a data-name="footer-social-whatsapp" target="_blank" href="https://wa.me/554331271101?text=Ol%C3%A1%2C%20acabei%20de%20acessar%20seu%20site%20e%20tenho%20algumas%20d%C3%BAvidas%20sobre%20os%20servi%C3%A7os.%20Poderia%20me%20explicar%20melhor%3F" aria-label="WhatsApp">
                                     <i className="fab fa-whatsapp"></i>
-                                </a>
-                                <a data-name="footer-social-youtube" href="#" aria-label="YouTube">
-                                    <i className="fab fa-youtube"></i>
-                                </a>
+                                </a>                               
                             </div>
                         </div>
                         
@@ -58,8 +52,8 @@ function Footer() {
                                     <i className="fas fa-map-marker-alt"></i>
                                 </div>
                                 <div data-name="footer-contact-text" className="footer-contact-text">
-                                    Av. Paulista, 1000 - Bela Vista<br />
-                                    São Paulo - SP, 01310-100
+                                    R. José Rodrigues da Silva, 425 - Parque industrial Aníbal Curi<br />
+                                    Mauá da Serra - PR, 86828-000
                                 </div>
                             </div>
                             <div data-name="footer-contact-item" className="footer-contact-item">
@@ -67,8 +61,8 @@ function Footer() {
                                     <i className="fas fa-phone-alt"></i>
                                 </div>
                                 <div data-name="footer-contact-text" className="footer-contact-text">
-                                    (11) 4002-8922<br />
-                                    (11) 99999-8888
+                                    (43) 3464-1061<br />
+                                    (43) 3127-1101 ( WhatsApp )
                                 </div>
                             </div>
                             <div data-name="footer-contact-item" className="footer-contact-item">
@@ -76,8 +70,9 @@ function Footer() {
                                     <i className="fas fa-envelope"></i>
                                 </div>
                                 <div data-name="footer-contact-text" className="footer-contact-text">
-                                    contato@grupoaltoserra.com.br<br />
-                                    suporte@grupoaltoserra.com.br
+                                    <a href="mailto:administrativo@grupoaltodaserra.com.br">
+                                        administrativo@grupoaltodaserra.com.br
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -103,6 +98,8 @@ function Footer() {
                 <div data-name="footer-bottom" className="footer-bottom">
                     <p>
                         &copy; {currentYear} Grupo Alto da Serra. Todos os direitos reservados.
+                        <br />
+                        <span style={{fontSize: '0.7rem'}}>Site elaborado por <a href="https://www.instagram.com/elder_fadin" target="_blank" style={{color: '#fff', textDecoration: 'underline'}}>Elder Adriano Fadin</a>.</span>
                     </p>
                 </div>
             </footer>

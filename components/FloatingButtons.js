@@ -46,9 +46,9 @@ function FloatingButtons() {
                 
                 {/* WhatsApp Button with Chat Bubble */}
                 <div className="whatsapp-container">
-                    <div className="chat-bubble">Posso te ajudar?</div>
+                    <div className="chat-bubble">Precisa de ajuda?</div>
                     <a 
-                        href="https://wa.me/5511999998888" 
+                        href="https://wa.me/554331271101?text=%22Ol%C3%A1%2C%20conheci%20a%20empresa%20atrav%C3%A9s%20do%20site%20e%20gostaria%20de%20obter%20mais%20informa%C3%A7%C3%B5es%20sobre%20os%20servi%C3%A7os%20oferecidos.%20Poderia%20me%20ajudar%3F" 
                         className="floating-btn whatsapp-btn" 
                         aria-label="Contato via WhatsApp"
                         target="_blank"

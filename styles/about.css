@@ -56,7 +56,7 @@
 
 .about-feature i {
     font-size: 1.2rem;
-    color: var(--primary-yellow);
+    color: hsla(128, 89%, 43%, 0.753);
     margin-right: 10px;
 }
 

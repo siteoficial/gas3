@@ -115,7 +115,7 @@
 }
 
 .service-feature i {
-    color: var(--primary-yellow);
+    color: hsla(128, 89%, 43%, 0.753);
     margin-right: 10px;
     font-size: 1rem;
 }

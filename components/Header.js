@@ -161,9 +161,9 @@ function Header() {
                     </nav>
 
                     <div data-name="header-cta" className="header-cta">
-                        <a data-name="header-phone" href="tel:+551140028922" className="header-phone">
+                        <a data-name="header-phone" href="tel:+554334641061" className="header-phone">
                             <i className="fas fa-phone-alt"></i>
-                            <span>(11) 4002-8922</span>
+                            <span>(43) 3464-1061</span>
                         </a>
                         <button data-name="mobile-menu-button" className="mobile-menu-button" onClick={toggleMobileMenu}>
                             <i className={`fas ${mobileMenuOpen ? 'fa-times' : 'fa-bars'}`}></i>

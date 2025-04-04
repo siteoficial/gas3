@@ -13,7 +13,7 @@ function CallToAction() {
                     <div data-name="cta-buttons" className="cta-buttons">
                         <a 
                             data-name="cta-btn-whatsapp"
-                            href="https://wa.me/551140028922" 
+                            href="https://wa.me/554331271101?text=Ol%C3%A1%2C%20acabei%20de%20vir%20do%20seu%20site%20e%20preciso%20de%20um%20guincho%20com%20urg%C3%AAncia.%20Pode%20me%20ajudar%3F" 
                             target="_blank" 
                             rel="noopener noreferrer"
                             className="btn btn-secondary"
@@ -23,7 +23,7 @@ function CallToAction() {
                         </a>
                         <a 
                             data-name="cta-btn-call"
-                            href="tel:+551140028922" 
+                            href="tel:+554334641061" 
                             className="btn btn-primary"
                         >
                             <i className="fas fa-phone-alt" style={{ marginRight: '8px' }}></i>
@@ -33,7 +33,7 @@ function CallToAction() {
                     
                     <div data-name="cta-phone" className="cta-phone">
                         <i className="fas fa-phone-alt"></i>
-                        <span data-name="cta-phone-number" className="cta-phone-number">(11) 4002-8922</span>
+                        <span data-name="cta-phone-number" className="cta-phone-number">(43) 3464-1061</span>
                     </div>
                 </div>
             </section>

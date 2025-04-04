@@ -3,41 +3,41 @@ function Services() {
         const services = [
             {
                 id: 1,
-                title: 'Guincho para Carros',
-                description: 'Serviço de reboque para veículos de passeio com atendimento rápido e seguro.',
-                icon: 'fa-car',
-                image: 'https://useast2prodbrandsites.blob.core.windows.net/heliar-sfassets-prod/images/default-source/90-anos-campaign/um-carro-guinchado-por-um-caminh%C3%A3o-em-uma-estrada-ensolarada.jpg?sfvrsn=96ed792e_1',
+                title: 'Serviço de Guincho',
+                description: 'Atendemos com segurança e eficiência em qualquer situação.',
+                icon: 'fa fa-truck',
+                image: 'images/img-guincho.webp',
                 features: [
-                    'Atendimento 24 horas',
-                    'Seguro para o veículo',
-                    'Profissionais treinados',
-                    'Equipamentos modernos'
+                    'Leve – Veículos de passeio e utilitários',
+                    'Pesado – Caminhões e veículos de grande porte',
+                    'Extra Pesado – Máquinas, ônibus e cargas especiais',
+                    'Atendimento em rodovias e áreas urbanas'
                 ]
             },
             {
                 id: 2,
-                title: 'Guincho para Motos',
-                description: 'Transporte especializado para motocicletas de todos os modelos e cilindradas.',
-                icon: 'fa-motorcycle',
-                image: 'https://viagemdemoto.com/wp-content/uploads/2018/08/Viagem-de-moto-Brasil-Argentina-Uruguai-19.jpg',
+                title: 'Serviço de Táxi',
+                description: 'Transporte rápido e seguro com motoristas experientes, prontos para te levar a qualquer destino.',
+                icon: 'fa fa-taxi',
+                image: 'images/img-taxi.webp',
                 features: [
-                    'Equipamentos específicos',
-                    'Cuidado redobrado',
-                    'Transporte seguro',
-                    'Preços acessíveis'
+                    'Atendimento 24 horas',
+                    'Carros confortáveis e climatizados',
+                    'Motoristas profissionais',
+                    'Serviço pontual e discreto'
                 ]
             },
             {
                 id: 3,
-                title: 'Guincho para Caminhões',
-                description: 'Reboque para veículos de grande porte com equipamentos especiais para cada situação.',
-                icon: 'fa-truck',
-                image: 'https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80',
+                title: 'Serviço de Munck',
+                description: 'Movimentação e transporte de cargas pesadas com segurança e eficiência.',
+                icon: 'fa-tools',
+                image: 'images/img-munck.webp',
                 features: [
-                    'Guincho pesado',
-                    'Plataformas especiais',
-                    'Atendimento em rodovias',
-                    'Equipe especializada'
+                    'Guindaste acoplado para içamento seguro',
+                    'Transporte de máquinas e estruturas',
+                    'Atendimento industrial e comercial',
+                    'Operadores qualificados'
                 ]
             }
         ];
@@ -81,7 +81,14 @@ function Services() {
                                         ))}
                                     </ul>
                                     <div className="service-btn-container" style={{textAlign: 'center', width: '100%'}}>
-                                        <a data-name={`service-btn-${service.id}`} href="#contact" className="btn btn-primary" style={{margin: '1rem auto 0', display: 'inline-block'}}>Solicitar Serviço</a>
+                                        {service.id === 1 ? (
+                                            <a data-name={`service-btn-${service.id}`} href="https://wa.me/554331271101?text=Ol%C3%A1%2C%20estou%20vindo%20do%20seu%20site%20e%20preciso%20solicitar%20um%20guincho.%20Pode%20me%20ajudar%3F" className="btn btn-primary" style={{margin: '1rem auto 0', display: 'inline-block'}} target="_blank" rel="noopener noreferrer">Solicitar este Serviço</a>
+                                        ) : service.id === 2 ? (
+                                            <a data-name={`service-btn-${service.id}`} href="https://wa.me/554331271101?text=Ol%C3%A1%2C%20acabei%20de%20acessar%20seu%20site%20e%20quero%20solicitar%20um%20t%C3%A1xi.%20Como%20proceder%3F" className="btn btn-primary" style={{margin: '1rem auto 0', display: 'inline-block'}} target="_blank" rel="noopener noreferrer">Solicitar este Serviço</a>
+                                        ) : (
+                                            <a data-name={`service-btn-${service.id}`} href="https://wa.me/554331271101?text=Ol%C3%A1%2C%20acabei%20de%20acessar%20seu%20site%20e%20quero%20solicitar%20um%20servi%C3%A7o%20de%20Munck.%20Como%20proceder%3F" className="btn btn-primary" style={{margin: '1rem auto 0', display: 'inline-block'}} target="_blank" rel="noopener noreferrer">Solicitar este Serviço</a>
+                                        )}
+
                                     </div>
                                 </div>
                             </div>
